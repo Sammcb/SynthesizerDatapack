@@ -1,0 +1,19 @@
+{
+	"parent": "synthesizer:synthesizer/amethyst_shard",
+	"display": {
+		"icon": {
+			"id": "minecraft:echo_shard"
+		},
+		"title": "Otherworldly Sounds",
+		"description": "Uncover shards of solid sound"
+	},
+	"criteria": {
+		"has_echo_shard": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{ "items": "minecraft:echo_shard" }]
+			}
+		}
+	},
+	"requirements": [["has_echo_shard"]]
+}

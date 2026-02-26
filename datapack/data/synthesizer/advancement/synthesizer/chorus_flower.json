@@ -1,0 +1,19 @@
+{
+	"parent": "synthesizer:synthesizer/echo_shard",
+	"display": {
+		"icon": {
+			"id": "minecraft:chorus_flower"
+		},
+		"title": "Spacetime Flower",
+		"description": "Harvest teleportation flora"
+	},
+	"criteria": {
+		"has_chorus_flower": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{ "items": "minecraft:chorus_flower" }]
+			}
+		}
+	},
+	"requirements": [["has_chorus_flower"]]
+}

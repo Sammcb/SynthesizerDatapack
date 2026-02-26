@@ -1,0 +1,19 @@
+{
+	"parent": "synthesizer:synthesizer/chorus_flower",
+	"display": {
+		"icon": {
+			"id": "minecraft:netherite_ingot"
+		},
+		"title": "Ancient Ingots",
+		"description": "Forge a superconductive alloy"
+	},
+	"criteria": {
+		"has_netherite_ingot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{ "items": "minecraft:netherite_ingot" }]
+			}
+		}
+	},
+	"requirements": [["has_netherite_ingot"]]
+}

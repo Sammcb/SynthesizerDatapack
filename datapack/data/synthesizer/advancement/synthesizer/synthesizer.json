@@ -1,0 +1,47 @@
+{
+	"parent": "synthesizer:synthesizer/nether_star",
+	"display": {
+		"icon": {
+			"id": "minecraft:spawner"
+		},
+		"title": "Energy to Matter",
+		"description": [
+			"The most powerful device",
+			"\n\n",
+			{
+				"type": "text",
+				"text": "Use Tuner to set item to synthesize. Spawns one item per second either 1 block above or below. Place blocks to force specific spawn location.",
+				"color": "gray",
+				"italic": true
+			},
+			"\n\n",
+			{
+				"type": "text",
+				"text": "Does not drop when harvested.",
+				"color": "red",
+				"italic": true
+			}
+		],
+		"frame": "challenge"
+	},
+	"criteria": {
+		"has_synthesizer": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:spawner",
+						"components": {
+							"minecraft:custom_data": {
+								"synthesizer": {
+									"is_synthesizer": true
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [["has_synthesizer"]]
+}

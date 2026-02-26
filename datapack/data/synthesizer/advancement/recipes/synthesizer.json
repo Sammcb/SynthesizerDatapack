@@ -1,0 +1,38 @@
+{
+	"parent": "synthesizer:recipes/root",
+	"criteria": {
+		"has_nether_star": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{ "items": "minecraft:nether_star" }]
+			}
+		},
+		"has_synthesizer": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:spawner",
+						"components": {
+							"minecraft:custom_data": {
+								"synthesizer": {
+									"is_synthesizer": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "synthesizer:synthesizer"
+			}
+		}
+	},
+	"requirements": [["has_nether_star", "has_synthesizer", "has_the_recipe"]],
+	"rewards": {
+		"recipes": ["synthesizer:synthesizer"]
+	}
+}

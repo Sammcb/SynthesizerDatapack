@@ -1,0 +1,47 @@
+{
+	"parent": "synthesizer:synthesizer/echo_shard",
+	"display": {
+		"icon": {
+			"id": "minecraft:glow_item_frame"
+		},
+		"title": "Harmonize",
+		"description": [
+			"Craft a tool to control synthesis",
+			"\n\n",
+			{
+				"type": "text",
+				"text": "Place on Synthesizer, then place item to synthesize in Tuner.",
+				"color": "gray",
+				"italic": true
+			},
+			"\n\n",
+			{
+				"type": "text",
+				"text": "Breaks automatically when successfully tuning Synthesizer. Reverts to a Glow Item Frame when broken.",
+				"color": "red",
+				"italic": true
+			}
+		],
+		"frame": "goal"
+	},
+	"criteria": {
+		"has_tuner": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:glow_item_frame",
+						"components": {
+							"minecraft:custom_data": {
+								"synthesizer": {
+									"is_tuner": true
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [["has_tuner"]]
+}
