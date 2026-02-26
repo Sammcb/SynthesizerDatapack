@@ -1,0 +1,30 @@
+{
+	"parent": "synthesizer:utilities/root",
+	"criteria": {
+		"interacted_with_tuner": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:glow_item_frame",
+					"components": {
+						"minecraft:custom_data": {
+							"synthesizer": {
+								"is_tuner": true
+							}
+						}
+					},
+					"distance": {
+						"absolute": {
+							"min": 0,
+							"max": 10
+						}
+					}
+				}
+			}
+		}
+	},
+	"requirements": [["interacted_with_tuner"]],
+	"rewards": {
+		"function": "synthesizer:set_item"
+	}
+}

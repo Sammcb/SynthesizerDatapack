@@ -1,0 +1,21 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:spawner"
+		},
+		"title": "Synthesizer",
+		"background": "minecraft:block/sculk_catalyst_top",
+		"description": "The story of the most powerful block",
+		"show_toast": false,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"has_echo_shard": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{ "items": "minecraft:echo_shard" }]
+			}
+		}
+	},
+	"requirements": [["has_echo_shard"]]
+}

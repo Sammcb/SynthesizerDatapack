@@ -1,0 +1,19 @@
+{
+	"parent": "synthesizer:synthesizer/netherite_ingot",
+	"display": {
+		"icon": {
+			"id": "minecraft:nether_star"
+		},
+		"title": "Untold Power",
+		"description": "Find a dimensional enegery source"
+	},
+	"criteria": {
+		"has_nether_star": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{ "items": "minecraft:nether_star" }]
+			}
+		}
+	},
+	"requirements": [["has_nether_star"]]
+}

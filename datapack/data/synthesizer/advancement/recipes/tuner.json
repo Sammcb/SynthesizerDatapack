@@ -1,0 +1,38 @@
+{
+	"parent": "synthesizer:recipes/root",
+	"criteria": {
+		"has_echo_shard": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [{ "items": "minecraft:echo_shard" }]
+			}
+		},
+		"has_tuner": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "minecraft:glow_item_frame",
+						"components": {
+							"minecraft:custom_data": {
+								"synthesizer": {
+									"is_tuner": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "synthesizer:tuner"
+			}
+		}
+	},
+	"requirements": [["has_echo_shard", "has_tuner", "has_the_recipe"]],
+	"rewards": {
+		"recipes": ["synthesizer:tuner"]
+	}
+}

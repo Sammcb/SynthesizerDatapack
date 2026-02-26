@@ -1,0 +1,41 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"pattern": ["ENE", "NSN", "ECE"],
+	"key": {
+		"E": "minecraft:echo_shard",
+		"N": "minecraft:netherite_ingot",
+		"S": "minecraft:nether_star",
+		"C": "minecraft:chorus_flower"
+	},
+	"result": {
+		"id": "minecraft:spawner",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"synthesizer": {
+					"is_synthesizer": true
+				}
+			},
+			"minecraft:custom_name": {
+				"type": "text",
+				"text": "Synthesizer",
+				"color": "light_purple",
+				"italic": false
+			},
+			"minecraft:block_entity_data": {
+				"id": "minecraft:mob_spawner",
+				"Delay": -1,
+				"MaxNearbyEntities": 1,
+				"MinSpawnDelay": 20,
+				"MaxSpawnDelay": 20,
+				"RequiredPlayerRange": 512,
+				"SpawnCount": 1,
+				"SpawnRange": 0,
+				"SpawnData": {
+					"entity": {}
+				}
+			}
+		}
+	}
+}

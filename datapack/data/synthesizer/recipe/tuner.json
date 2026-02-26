@@ -1,0 +1,27 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"pattern": ["EAE", "AGA", "EAE"],
+	"key": {
+		"E": "minecraft:echo_shard",
+		"A": "minecraft:amethyst_shard",
+		"G": "minecraft:glow_item_frame"
+	},
+	"result": {
+		"id": "minecraft:glow_item_frame",
+		"count": 1,
+		"components": {
+			"minecraft:custom_data": {
+				"synthesizer": {
+					"is_tuner": true
+				}
+			},
+			"minecraft:custom_name": {
+				"type": "text",
+				"text": "Tuner",
+				"color": "aqua",
+				"italic": false
+			}
+		}
+	}
+}
