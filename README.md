@@ -1,5 +1,9 @@
 # SynthesizerDatapack
 
+## Guide
+
+For information about how this datapack works and the items it adds, see the [Wiki](https://github.com/Sammcb/SynthesizerDatapack/wiki).
+
 ## Development
 
 ### Building
