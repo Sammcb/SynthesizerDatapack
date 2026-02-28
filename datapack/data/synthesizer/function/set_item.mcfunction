@@ -7,6 +7,9 @@ execute as @e[type=minecraft:glow_item_frame, distance=0..10, nbt={data: {synthe
 # Stop execution if the tuner is not placed on a synthesizer.
 execute as @n[tag=synthesizer_set_item_active] at @s unless data block ^ ^ ^-1 components."minecraft:custom_data".synthesizer.is_synthesizer run return fail
 
+# Set block_entity_data of Synthesizer as this is ignored when placing in survival.
+execute as @n[tag=synthesizer_set_item_active] at @s run data merge block ^ ^ ^-1 {Delay: -1, MaxNearbyEntities: 1, MinSpawnDelay: 20, MaxSpawnDelay: 20, RequiredPlayerRange: 512, SpawnCount: 1, SpawnRange: 0}
+
 # Reset item data in the synthesizer.
 execute as @n[tag=synthesizer_set_item_active] at @s if data block ^ ^ ^-1 SpawnData.entity.Item run data modify block ^ ^ ^-1 SpawnData.entity set value {}
 
