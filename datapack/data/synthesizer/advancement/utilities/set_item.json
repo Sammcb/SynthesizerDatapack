@@ -5,15 +5,15 @@
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"entity": {
-					"type": "minecraft:glow_item_frame",
-					"components": {
+					"minecraft:entity_type": "minecraft:glow_item_frame",
+					"minecraft:components": {
 						"minecraft:custom_data": {
 							"synthesizer": {
 								"is_tuner": true
 							}
 						}
 					},
-					"distance": {
+					"minecraft:distance": {
 						"absolute": {
 							"min": 0,
 							"max": 10
