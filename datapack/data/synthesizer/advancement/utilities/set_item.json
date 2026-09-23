@@ -5,18 +5,22 @@
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"entity": {
-					"minecraft:entity_type": "minecraft:glow_item_frame",
-					"minecraft:components": {
-						"minecraft:custom_data": {
-							"synthesizer": {
-								"is_tuner": true
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:entity_type": "minecraft:glow_item_frame",
+						"minecraft:components": {
+							"minecraft:custom_data": {
+								"synthesizer": {
+									"is_tuner": true
+								}
 							}
-						}
-					},
-					"minecraft:distance": {
-						"absolute": {
-							"min": 0,
-							"max": 10
+						},
+						"minecraft:distance": {
+							"absolute": {
+								"min": 0,
+								"max": 10
+							}
 						}
 					}
 				}
